@@ -1,0 +1,63 @@
+* Doubly Linked List Project
+
+This project implements a doubly linked list data structure in C++, providing a flexible and efficient way to work with linked lists, along with comprehensive unit tests.
+
+Features
+
+- Dynamic allocation and deallocation of list nodes
+- Insertion and deletion operations (push_front, push_back, insert, remove)
+- Concatenation of lists
+- Searching for elements
+- File I/O operations for saving and loading lists
+- Comparison of lists
+
+** Navigation
+- [[#building][Building]]
+  - [[#with-nix][With Nix]]
+  - [[#manually][Manually]]
+- [[#usage][Usage]]
+
+** Building
+
+*** With Nix
+
+For Nix users, building and running the project is straightforward:
+
+#+begin_src shell
+nix run github:seajoyer/Doubly_Linked_List --impure
+#+end_src
+
+You can also start an isolated development shell with all dependencies by running:
+
+#+begin_src shell
+nix develop github:seajoyer/Doubly_Linked_List
+#+end_src
+
+*** Manually
+
+**** Prerequisites
+
+Ensure you have the following dependencies installed:
+
+- [[https://gcc.gnu.org/][g++]] compiler (with C++11 support)
+- [[https://cmake.org/download/][CMake]]
+- [[https://github.com/martinmoene/Catch][Catch]] (for testing)
+
+**** Building
+
+1. Clone the repository:
+   #+begin_src shell
+   git clone https://github.com/seajoyer/Doubly_Linked_List
+   cd Doubly_Linked_List
+   #+end_src
+
+2. Build and run tests:
+
+   ~mkdir build ; cd build~ create a build directory and navigate to it
+
+   ~cmake ..~ generate the build files with CMake
+
+   ~cmake --build .~ build the project
+
+   ~./doubly_linked_list_tests~ run the tests
+

@@ -12,23 +12,29 @@
         pkgs = nixpkgs.legacyPackages.${system};
 
         testDoublyLinkedList = pkgs.stdenv.mkDerivation {
-          pname = "run_tests";
+          pname = "doubly_linked_list_tests";
           version = "0.1.0";
           name = "doubly_linked_list_tests-0.1.0";
 
           src = ./.;
 
-          nativeBuildInputs = with pkgs; [ gnumake libgcc ];
+          nativeBuildInputs = with pkgs; [ gnumake libgcc cmake ];
 
           buildInputs = with pkgs; [ libcxx catch ];
 
+          cmakeFlags = [
+            "-DCMAKE_BUILD_TYPE=Release"
+            "-DCMAKE_CXX_FLAGS=-std=c++17"
+          ];
+
           buildPhase = ''
-            make build/run_tests -j $NIX_BUILD_CORES
+            cmake .
+            make VERBOSE=1 -j $NIX_BUILD_CORES
           '';
 
           installPhase = ''
             mkdir -p $out/bin
-            cp build/run_tests $out/bin/
+            cp doubly_linked_list_tests $out/bin/
           '';
         };
 
@@ -44,7 +50,7 @@
         devShells.default = pkgs.mkShell {
           name = "doubly_linked_list-dev-shell";
 
-          nativeBuildInputs = with pkgs; [ gnumake ccache git bear libgcc ];
+          nativeBuildInputs = with pkgs; [ gnumake cmake ccache git bear libgcc ];
 
           buildInputs = with pkgs; [ libcxx catch ];
 
