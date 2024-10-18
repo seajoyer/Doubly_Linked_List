@@ -11,12 +11,6 @@ Features
 - File I/O operations for saving and loading lists
 - Comparison of lists
 
-** Navigation
-- [[#building][Building]]
-  - [[#with-nix][With Nix]]
-  - [[#manually][Manually]]
-- [[#usage][Usage]]
-
 ** Building
 
 *** With Nix
