@@ -39,9 +39,9 @@ nix develop github:seajoyer/Doubly_Linked_List
 
 Ensure you have the following dependencies installed:
 
-- [[https://gcc.gnu.org/][g++]] compiler (with C++11 support)
+- [[https://gcc.gnu.org/][g++]]
 - [[https://cmake.org/download/][CMake]]
-- [[https://github.com/martinmoene/Catch][Catch]] (for testing)
+- [[https://github.com/martinmoene/Catch][Catch]]
 
 **** Building
 
