@@ -53,11 +53,10 @@ Ensure you have the following dependencies installed:
 
 2. Build and run tests:
 
-   ~mkdir build ; cd build~ create a build directory and navigate to it
+   ~mkdir build ; cd build~  to create a build directory and navigate to it
 
-   ~cmake ..~ generate the build files with CMake
+   ~cmake ..~  to generate the build files with CMake
 
-   ~cmake --build .~ build the project
+   ~cmake --build .~  to build the project
 
-   ~./doubly_linked_list_tests~ run the tests
-
+   ~./doubly_linked_list_tests~  to run the tests
